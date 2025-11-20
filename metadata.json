@@ -1,0 +1,5 @@
+{
+  "name": "NASA Solar System Explorer",
+  "description": "Simulasi interaktif 3D tata surya dengan data akurat NASA, navigasi first-person, dan visualisasi realistis menggunakan Three.js dan React.",
+  "requestFramePermissions": []
+}
