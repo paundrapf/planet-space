@@ -23,7 +23,7 @@ const App: React.FC = () => {
 
   const handleCloseInfo = () => {
     setSelectedPlanet(null);
-    // User perlu klik lagi untuk mengaktifkan kontrol setelah menutup panel
+    // User perlu klik lagi untuk mengaktifkan kontrol setelah menutup panell
   };
 
   return (
@@ -31,7 +31,7 @@ const App: React.FC = () => {
       {/* UI Overlay Layers */}
       <ControlsOverlay />
       <InfoPanel selectedPlanet={selectedPlanet} onClose={handleCloseInfo} />
-      
+
       {/* Crosshair untuk navigasi */}
       {!selectedPlanet && isLocked && (
         <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-white/50 rounded-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-30 mix-blend-difference" />
@@ -45,8 +45,8 @@ const App: React.FC = () => {
       >
         <ErrorBoundary>
           <Suspense fallback={<Html fullscreen><LoadingScreen /></Html>}>
-            <SpaceScene 
-              onPlanetSelect={handlePlanetSelect} 
+            <SpaceScene
+              onPlanetSelect={handlePlanetSelect}
               isLocked={isLocked}
             />
           </Suspense>
@@ -54,9 +54,9 @@ const App: React.FC = () => {
 
         {/* Kontrol Navigasi Custom (WASD + Mouse) */}
         {!selectedPlanet && (
-          <FlyControls 
+          <FlyControls
             isLocked={isLocked}
-            onLock={() => setIsLocked(true)} 
+            onLock={() => setIsLocked(true)}
             onUnlock={() => setIsLocked(false)}
           />
         )}
