@@ -1,32 +1,26 @@
 import { PlanetData } from './types';
 
-// URL Tekstur Berkualitas Tinggi & Stabil (Hosted on GitHub)
-// Source: https://github.com/marcodifrancesco/solar-system
-// Menggunakan CDN GitHub Raw untuk menghindari masalah CORS atau hotlinking blocking
-const BASE_URL = "https://raw.githubusercontent.com/marcodifrancesco/solar-system/main/public/textures";
-
 const TEXTURES = {
-  sun: `${BASE_URL}/sun.jpg`,
-  mercury: `${BASE_URL}/mercury.jpg`,
-  venus: `${BASE_URL}/venus.jpg`,
-  earth: `${BASE_URL}/earth/day.jpg`,
-  earthClouds: `${BASE_URL}/earth/clouds.jpg`,
-  mars: `${BASE_URL}/mars.jpg`,
-  jupiter: `${BASE_URL}/jupiter.jpg`,
-  saturn: `${BASE_URL}/saturn.jpg`,
-  saturnRing: `${BASE_URL}/saturn/ring.png`,
-  uranus: `${BASE_URL}/uranus.jpg`,
-  neptune: `${BASE_URL}/neptune.jpg`
+  sun: "/textures/sun.jpg",
+  mercury: "/textures/mercury.jpg",
+  venus: "/textures/venus.jpg",
+  earth: "/textures/earth.jpg",
+  earthClouds: "/textures/earth_clouds.png",
+  mars: "/textures/mars.jpg",
+  jupiter: "/textures/jupiter.jpg",
+  saturn: "/textures/saturn.jpg",
+  saturnRing: "/textures/saturn_ring.png",
+  uranus: "/textures/uranus.jpg",
+  neptune: "/textures/neptune.jpg"
 };
 
-// Data Tata Surya Lengkap termasuk Matahari
 export const SOLAR_SYSTEM_DATA: PlanetData[] = [
   {
     id: 'sun',
     name: 'Matahari',
     textureUrl: TEXTURES.sun,
-    radius: 12, 
-    distanceFromSun: 0, 
+    radius: 12,
+    distanceFromSun: 0,
     rotationSpeed: 0.001,
     orbitSpeed: 0,
     color: '#FDB813',
